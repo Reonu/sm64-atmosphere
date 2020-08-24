@@ -1184,7 +1184,7 @@ s32 init_level(void) {
 
         if (gCurrentArea != NULL) {
             reset_camera(gCurrentArea->camera);
-
+/*
             if (gCurrDemoInput != NULL) {
                 set_mario_action(gMarioState, ACT_IDLE, 0);
             } else if (gDebugLevelSelect == 0) {
@@ -1196,7 +1196,15 @@ s32 init_level(void) {
                         val4 = 1;
                     }
                 }
-            }
+            }*/
+            //Skip intro
+            if (gCurrDemoInput != NULL) {
+                set_mario_action(gMarioState, ACT_IDLE, 0);
+            } else if (gDebugLevelSelect == 0) {
+                if (gMarioState->action != ACT_UNINITIALIZED) {
+                        set_mario_action(gMarioState, ACT_IDLE, 0);
+    }
+}
         }
 
         if (val4 != 0) {
