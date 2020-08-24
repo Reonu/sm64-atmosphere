@@ -12,7 +12,7 @@ default: all
 # Version of the game to build
 VERSION ?= us
 # Graphics microcode used
-GRUCODE ?= f3d_old
+GRUCODE ?= f3dex2
 # If COMPARE is 1, check the output sha1sum when building 'all'
 COMPARE ?= 1
 # If NON_MATCHING is 1, define the NON_MATCHING and AVOID_UB macros when building (recommended)
@@ -264,7 +264,7 @@ PYTHON    := python3
 
 # change the compiler to gcc, to use the default, install the gcc-mips-linux-gnu package
 ifeq ($(COMPILER),gcc)
-  CC        := $(CROSS)gcc
+  CC        := $(CROSS)gcc-10
 endif
 
 ifeq ($(TARGET_N64),1)
