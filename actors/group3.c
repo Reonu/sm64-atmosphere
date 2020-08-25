@@ -12,3 +12,6 @@ UNUSED static const u64 binid_0 = 0;
 
 #include "water_bubble/model.inc.c"
 UNUSED static const u64 binid_1 = 1;
+
+#include "window/model.inc.c"
+#include "window/collision.inc.c"

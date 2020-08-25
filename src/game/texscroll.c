@@ -13,9 +13,14 @@
 
 
 #include "src/game/texscroll/bob_texscroll.inc.c"
+#include "src/game/texscroll/group3_texscroll.inc.c"
 void scroll_textures() {
 	if(SCROLL_CONDITION(sSegmentROMTable[0x7] == (uintptr_t)_bob_segment_7SegmentRomStart)) {
 		scroll_textures_bob();
+	}
+
+	if(SCROLL_CONDITION(sSegmentROMTable[0x5] == (uintptr_t)_group3_mio0SegmentRomStart)) {
+		scroll_textures_group3();
 	}
 
 }
