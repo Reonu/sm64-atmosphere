@@ -42,6 +42,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_KOOPA_WITH_SHELL, 777, -1548, -727, 0, 0, 0, 0x00020000, bhvKoopa),
 		OBJECT(MODEL_NONE, 65, -1548, 684, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
 		MARIO_POS(0x01, 0, 91, -1548, 1150),
+		OBJECT(0x39, 933, -1141, -5220, 0, 0, 0, 0x00000000, bhvTowerDoor),
 		TERRAIN(bob_area_1_collision),
 		MACRO_OBJECTS(bob_area_1_Area_root_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
