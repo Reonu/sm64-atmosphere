@@ -20,7 +20,7 @@ const LevelScript level_bob_entry[] = {
 	INIT_LEVEL(),
 	LOAD_MIO0(0x07, _bob_segment_7SegmentRomStart, _bob_segment_7SegmentRomEnd), 
 	LOAD_MIO0_TEXTURE(0x09, _generic_mio0SegmentRomStart, _generic_mio0SegmentRomEnd), 
-	LOAD_MIO0(0x0A, _water_skybox_mio0SegmentRomStart, _water_skybox_mio0SegmentRomEnd), 
+	LOAD_MIO0(0x0A, _bidw_skybox_mio0SegmentRomStart, _bidw_skybox_mio0SegmentRomEnd), 
 	LOAD_MIO0(0x05, _group3_mio0SegmentRomStart, _group3_mio0SegmentRomEnd), 
 	LOAD_RAW(0x0C, _group3_geoSegmentRomStart, _group3_geoSegmentRomEnd), 
 	LOAD_MIO0(0x06, _group14_mio0SegmentRomStart, _group14_mio0SegmentRomEnd), 
@@ -39,7 +39,9 @@ const LevelScript level_bob_entry[] = {
 
 	AREA(1, bob_area_1),
 		WARP_NODE(0x0A, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
-		OBJECT(MODEL_NONE, 1308, 0, 1030, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
+		OBJECT(MODEL_KOOPA_WITH_SHELL, 777, -1548, -727, 0, 0, 0, 0x00020000, bhvKoopa),
+		OBJECT(MODEL_NONE, 65, -1548, 684, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
+		MARIO_POS(0x01, 0, 91, -1548, 1150),
 		TERRAIN(bob_area_1_collision),
 		MACRO_OBJECTS(bob_area_1_Area_root_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_GRASS),
@@ -47,7 +49,7 @@ const LevelScript level_bob_entry[] = {
 	END_AREA(),
 
 	FREE_LEVEL_POOL(),
-	MARIO_POS(1, 0, 0, 0, 0),
+	MARIO_POS(0x01, 0, 91, -1548, 1150),
 	CALL(0, lvl_init_or_update),
 	CALL_LOOP(1, lvl_init_or_update),
 	CLEAR_LEVEL(),

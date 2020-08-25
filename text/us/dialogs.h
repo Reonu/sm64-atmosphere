@@ -102,25 +102,19 @@ We'll prepare all of the\n\
 cannons in this course for\n\
 you to use. Bon Voyage!"))
 
-DEFINE_DIALOG(DIALOG_005, 1, 3, 30, 200, _("\
-Hey, Mario! Is it true\n\
-that you beat the Big\n\
-Bob-omb? Cool!\n\
-You must be strong. And\n\
-pretty fast. So, how fast\n\
-are you, anyway?\n\
-Fast enough to beat me...\n\
-Koopa the Quick? I don't\n\
-think so. Just try me.\n\
-How about a race to the\n\
-mountaintop, where the\n\
-Big Bob-omb was?\n\
-Whaddya say? When I say\n\
-『Go,』 let the race begin!\n\
+DEFINE_DIALOG(DIALOG_005, 1, 4, 30, 200, _("\
+Hello and welcome! Thank\n\
+you for choosing Koopa\n\
+Airlines.\n\
 \n\
-Ready....\n\
+Everything is ready for us\n\
+to takeoff so you can\n\
+enjoy a nice vacation in\n\
+the Canary Islands.\n\
 \n\
-//Go!////Don't Go"))
+Shall we?\n\
+\n\
+//Go!////Wait!"))
 
 DEFINE_DIALOG(DIALOG_006, 1, 3, 30, 200, _("\
 Hey!!! Don't try to " SCAM_ME
