@@ -531,7 +531,7 @@ static void koopa_the_quick_act_show_init_text(void) {
         o->oKoopaTurningAwayFromWall = FALSE;
         o->oFlags |= OBJ_FLAG_ACTIVE_FROM_AFAR;
         ;   */
-        initiate_warp(LEVEL_WF,1,0x0A,0);
+        initiate_warp(LEVEL_WMOTR,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
     } else if (response == 2) {

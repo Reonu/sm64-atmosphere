@@ -30,8 +30,6 @@
 #include "level_table.h"
 
 #define CBUTTON_MASK (U_CBUTTONS | D_CBUTTONS | L_CBUTTONS | R_CBUTTONS)
-#define BOUNDS_EXTENSION 4.0f
-
 
 /**
  * @file camera.c
@@ -877,10 +875,6 @@ void pan_ahead_of_player(struct Camera *c) {
 }
 
 s16 find_in_bounds_yaw_wdw_bob_thi(Vec3f pos, Vec3f origin, s16 yaw) {
-    // disable bounds restriction when extending level bounds
-#ifdef BOUNDS_EXTENSION
-    return yaw;
-#endif
     switch (gCurrLevelArea) {
         case AREA_WDW_MAIN:
             yaw = clamp_positions_and_find_yaw(pos, origin, 4508.f, -3739.f, 4508.f, -3739.f);
@@ -4433,9 +4427,9 @@ s32 is_behind_surface(Vec3f pos, struct Surface *surf) {
                 (surf->vertex3[2] - surf->vertex2[2]) * (surf->vertex2[0] - surf->vertex1[0]);
     f32 normZ = (surf->vertex2[0] - surf->vertex1[0]) * (surf->vertex3[1] - surf->vertex2[1]) -
                 (surf->vertex3[0] - surf->vertex2[0]) * (surf->vertex2[1] - surf->vertex1[1]);
-    f32 dirX = surf->vertex1[0] - pos[0] / BOUNDS_EXTENSION;
-    f32 dirY = surf->vertex1[1] - pos[1] / BOUNDS_EXTENSION;
-    f32 dirZ = surf->vertex1[2] - pos[2] / BOUNDS_EXTENSION;
+    f32 dirX = surf->vertex1[0] - pos[0];
+    f32 dirY = surf->vertex1[1] - pos[1];
+    f32 dirZ = surf->vertex1[2] - pos[2];
 
     if (dirX * normX + dirY * normY + dirZ * normZ < 0) {
         behindSurface = 1;
@@ -6368,12 +6362,6 @@ struct CameraTrigger sCamBBH[] = {
  *
  * Each table is terminated with NULL_TRIGGER
  */
-struct CameraTrigger sCamTotWC[] = {
-	NULL_TRIGGER
-};
-struct CameraTrigger sCamWMOtR[] = {
-	NULL_TRIGGER
-};
 struct CameraTrigger *sCameraTriggers[LEVEL_COUNT + 1] = {
     NULL,
     #include "levels/level_defines.h"
@@ -10753,19 +10741,6 @@ struct Cutscene sCutsceneReadMessage[] = {
     { cutscene_read_message_end, 0 }
 };
 
-BAD_RETURN(s32) cutscene_plane_rotate_camera(struct Camera *c) {
-    
-    vec3f_set_dist_and_angle(sMarioCamState->pos, c->pos, 4000, 0x2000, (gCutsceneTimer * 0x100));
-    if (gCutsceneTimer == 399) {
-        initiate_warp(LEVEL_BOB,1,0x0A,0);
-        level_set_transition(30,NULL);
-        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
-    }
-}
-struct Cutscene sCutscenePlane[] = {
-    { cutscene_plane_rotate_camera, 400 },
-};
-
 /* TODO:
  * The next two arrays are both related to levels, and they look generated.
  * These should be split into their own file.
@@ -11231,7 +11206,6 @@ void play_cutscene(struct Camera *c) {
         CUTSCENE(CUTSCENE_RACE_DIALOG, sCutsceneDialog)
         CUTSCENE(CUTSCENE_ENTER_PYRAMID_TOP, sCutsceneEnterPyramidTop)
         CUTSCENE(CUTSCENE_SSL_PYRAMID_EXPLODE, sCutscenePyramidTopExplode)
-        CUTSCENE(CUTSCENE_PLANE, sCutscenePlane)
     }
 
 #undef CUTSCENE
