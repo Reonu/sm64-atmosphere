@@ -47,5 +47,7 @@ const Collision jrb_area_1_collision[] = {
 	COL_TRI(15, 2, 16),
 	COL_TRI(18, 21, 3),
 	COL_TRI_STOP(),
+	COL_WATER_BOX_INIT(1),
+	COL_WATER_BOX(0x00, -4014, -6924, 4191, -2036, -604),
 	COL_END()
 };
