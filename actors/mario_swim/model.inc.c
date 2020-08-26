@@ -6,10 +6,6 @@ Lights1 mario_swim_skin_lights = gdSPDefLights1(
 	0x7E, 0x60, 0x3C,
 	0xFD, 0xC0, 0x79, 0x28, 0x28, 0x28);
 
-Lights1 mario_swim_hat_lights = gdSPDefLights1(
-	0x7F, 0x0, 0x0,
-	0xFE, 0x0, 0x0, 0x28, 0x28, 0x28);
-
 Lights1 mario_swim_shoes_lights = gdSPDefLights1(
 	0x39, 0xD, 0x7,
 	0x72, 0x1B, 0xE, 0x28, 0x28, 0x28);
@@ -26,6 +22,10 @@ Lights1 mario_swim_sideburns_lights = gdSPDefLights1(
 	0x7E, 0x60, 0x3C,
 	0xFD, 0xC0, 0x79, 0x28, 0x28, 0x28);
 
+Lights1 mario_swim_hat_lights = gdSPDefLights1(
+	0x7F, 0x0, 0x0,
+	0xFE, 0x0, 0x0, 0x28, 0x28, 0x28);
+
 Lights1 mario_swim_face_1___Half_Eyes_lights = gdSPDefLights1(
 	0x7E, 0x60, 0x3C,
 	0xFD, 0xC0, 0x79, 0x28, 0x28, 0x28);
@@ -41,10 +41,6 @@ Lights1 mario_swim_face_7___Dead_Eyes_lights = gdSPDefLights1(
 Lights1 mario_swim_hair_lights = gdSPDefLights1(
 	0x39, 0x2, 0x0,
 	0x73, 0x5, 0x0, 0x28, 0x28, 0x28);
-
-Lights1 mario_swim_white_lights = gdSPDefLights1(
-	0x7F, 0x7F, 0x7F,
-	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
 Gfx mario_swim_metal_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 mario_swim_metal_rgba16[] = {
@@ -506,47 +502,6 @@ u8 mario_swim_metal_rgba16[] = {
 	0x1, 
 };
 
-Gfx mario_swim_mario_cap_ci4_aligner[] = {gsSPEndDisplayList()};
-u8 mario_swim_mario_cap_ci4[] = {
-	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
-	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
-	0x0, 0x0, 0x0, 0x1, 0x11, 0x11, 0x11, 0x11, 0x0, 
-	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 
-	0x11, 0x11, 0x11, 0x11, 0x12, 0x22, 0x21, 0x11, 0x10, 
-	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x11, 0x11, 0x34, 
-	0x41, 0x55, 0x14, 0x44, 0x62, 0x11, 0x11, 0x10, 0x0, 
-	0x0, 0x0, 0x0, 0x11, 0x12, 0x27, 0x89, 0x9A, 0x32, 
-	0xB8, 0x88, 0x73, 0x22, 0x11, 0x10, 0x0, 0x0, 0x0, 
-	0x1, 0x11, 0x12, 0x79, 0x8C, 0x8C, 0x4B, 0x98, 0x8C, 
-	0xCA, 0x62, 0x21, 0x11, 0x10, 0x0, 0x0, 0x11, 0x12, 
-	0x25, 0xDC, 0xCC, 0xCC, 0xD9, 0xCC, 0x8C, 0xC8, 0xE5, 
-	0x12, 0x12, 0x11, 0x0, 0x1, 0x11, 0x12, 0x6F, 0x8C, 
-	0x9A, 0x78, 0xCC, 0xC8, 0xB9, 0xCC, 0xCE, 0x22, 0x22, 
-	0x11, 0x10, 0x1, 0x11, 0x25, 0xB8, 0xCC, 0xF4, 0x6D, 
-	0xCC, 0x97, 0x2A, 0x8C, 0xC8, 0xE3, 0x22, 0x11, 0x10, 
-	0x2, 0x21, 0x24, 0x8C, 0x8C, 0xE2, 0x23, 0xBB, 0x42, 
-	0x26, 0xFC, 0xCC, 0xCA, 0x42, 0x21, 0x10, 0x1, 0x22, 
-	0x4E, 0xCC, 0xCD, 0xB6, 0x12, 0x55, 0x65, 0x12, 0x78, 
-	0xCC, 0xCC, 0xE4, 0x52, 0x10, 0x1, 0x12, 0x4E, 0xF8, 
-	0x87, 0x22, 0x22, 0x11, 0x22, 0x22, 0x6A, 0xCC, 0xFA, 
-	0x45, 0x21, 0x10, 0x0, 0x11, 0x25, 0x26, 0x56, 0x21, 
-	0x11, 0x12, 0x21, 0x12, 0x25, 0x65, 0x25, 0x51, 0x11, 
-	0x0, 0x0, 0x0, 0x12, 0x22, 0x11, 0x22, 0x22, 0x21, 
-	0x12, 0x21, 0x22, 0x22, 0x11, 0x12, 0x0, 0x0, 0x0, 
-	0x0, 0x0, 0x1, 0x21, 0x11, 0x11, 0x12, 0x11, 0x21, 
-	0x21, 0x12, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
-	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
-	0x0, 0x0, 0x0, 0x0, 
-};
-
-Gfx mario_swim_mario_cap_ci4_pal_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 mario_swim_mario_cap_ci4_pal_rgba16[] = {
-	0x0, 0x0, 0xF7, 0xFD, 0xF7, 0xBF, 0xF6, 0xF7, 0xF6, 
-	0x31, 0xF7, 0xBB, 0xF7, 0x3B, 0xF3, 0xE1, 0xF0, 0x43, 
-	0xF0, 0xC7, 0xF3, 0x19, 0xF5, 0x2B, 0xF0, 0x1, 0xF1, 
-	0x4D, 0xF2, 0x95, 0xF2, 0x11, 
-};
-
 Gfx mario_swim_mario_mustache_ia4_aligner[] = {gsSPEndDisplayList()};
 u8 mario_swim_mario_mustache_ia4[] = {
 	0xEE, 0xEE, 0xEE, 0xEE, 0xEE, 0xEE, 0xEE, 0xEE, 0xEE, 
@@ -793,6 +748,47 @@ u8 mario_swim_mario_sideburn_ci4_pal_rgba16[] = {
 	0x1, 0x40, 0x1, 0xA8, 0x1, 0x78, 0x1, 0x38, 0x1, 
 	0x30, 0x1, 0x28, 0x1, 0x20, 0x1, 0x80, 0x1, 0x50, 
 	0x1, 0x88, 0x1, 0x18, 0x1, 
+};
+
+Gfx mario_swim_mario_cap_ci4_aligner[] = {gsSPEndDisplayList()};
+u8 mario_swim_mario_cap_ci4[] = {
+	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
+	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
+	0x0, 0x0, 0x0, 0x1, 0x11, 0x11, 0x11, 0x11, 0x0, 
+	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 
+	0x11, 0x11, 0x11, 0x11, 0x12, 0x22, 0x21, 0x11, 0x10, 
+	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x11, 0x11, 0x34, 
+	0x41, 0x55, 0x14, 0x44, 0x62, 0x11, 0x11, 0x10, 0x0, 
+	0x0, 0x0, 0x0, 0x11, 0x12, 0x27, 0x89, 0x9A, 0x32, 
+	0xB8, 0x88, 0x73, 0x22, 0x11, 0x10, 0x0, 0x0, 0x0, 
+	0x1, 0x11, 0x12, 0x79, 0x8C, 0x8C, 0x4B, 0x98, 0x8C, 
+	0xCA, 0x62, 0x21, 0x11, 0x10, 0x0, 0x0, 0x11, 0x12, 
+	0x25, 0xDC, 0xCC, 0xCC, 0xD9, 0xCC, 0x8C, 0xC8, 0xE5, 
+	0x12, 0x12, 0x11, 0x0, 0x1, 0x11, 0x12, 0x6F, 0x8C, 
+	0x9A, 0x78, 0xCC, 0xC8, 0xB9, 0xCC, 0xCE, 0x22, 0x22, 
+	0x11, 0x10, 0x1, 0x11, 0x25, 0xB8, 0xCC, 0xF4, 0x6D, 
+	0xCC, 0x97, 0x2A, 0x8C, 0xC8, 0xE3, 0x22, 0x11, 0x10, 
+	0x2, 0x21, 0x24, 0x8C, 0x8C, 0xE2, 0x23, 0xBB, 0x42, 
+	0x26, 0xFC, 0xCC, 0xCA, 0x42, 0x21, 0x10, 0x1, 0x22, 
+	0x4E, 0xCC, 0xCD, 0xB6, 0x12, 0x55, 0x65, 0x12, 0x78, 
+	0xCC, 0xCC, 0xE4, 0x52, 0x10, 0x1, 0x12, 0x4E, 0xF8, 
+	0x87, 0x22, 0x22, 0x11, 0x22, 0x22, 0x6A, 0xCC, 0xFA, 
+	0x45, 0x21, 0x10, 0x0, 0x11, 0x25, 0x26, 0x56, 0x21, 
+	0x11, 0x12, 0x21, 0x12, 0x25, 0x65, 0x25, 0x51, 0x11, 
+	0x0, 0x0, 0x0, 0x12, 0x22, 0x11, 0x22, 0x22, 0x21, 
+	0x12, 0x21, 0x22, 0x22, 0x11, 0x12, 0x0, 0x0, 0x0, 
+	0x0, 0x0, 0x1, 0x21, 0x11, 0x11, 0x12, 0x11, 0x21, 
+	0x21, 0x12, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
+	0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
+	0x0, 0x0, 0x0, 0x0, 
+};
+
+Gfx mario_swim_mario_cap_ci4_pal_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 mario_swim_mario_cap_ci4_pal_rgba16[] = {
+	0x0, 0x0, 0xF7, 0xFD, 0xF7, 0xBF, 0xF6, 0xF7, 0xF6, 
+	0x31, 0xF7, 0xBB, 0xF7, 0x3B, 0xF3, 0xE1, 0xF0, 0x43, 
+	0xF0, 0xC7, 0xF3, 0x19, 0xF5, 0x2B, 0xF0, 0x1, 0xF1, 
+	0x4D, 0xF2, 0x95, 0xF2, 0x11, 
 };
 
 Gfx mario_swim_mario_face_2_rgba16_aligner[] = {gsSPEndDisplayList()};
@@ -1501,17 +1497,8 @@ Gfx mario_swim_000_offset_001_Chest_mesh_tri_1[] = {
 	gsSP1Triangle(5, 11, 4, 0),
 	gsSP1Triangle(4, 11, 12, 0),
 	gsSP1Triangle(13, 1, 14, 0),
+	gsSP1Triangle(14, 1, 0, 0),
 	gsSP1Triangle(4, 14, 0, 0),
-	gsSPEndDisplayList(),
-};Vtx mario_swim_000_offset_001_Chest_mesh_vtx_2[3] = {
-	{{{93, -26, -32},0, {-16, -16},{0x60, 0xE3, 0xB2, 0xFF}}},
-	{{{82, 32, 27},0, {-16, -16},{0x5E, 0x54, 0xF2, 0xFF}}},
-	{{{93, -26, 33},0, {-16, -16},{0x76, 0xD1, 0xA, 0xFF}}},
-};
-
-Gfx mario_swim_000_offset_001_Chest_mesh_tri_2[] = {
-	gsSPVertex(mario_swim_000_offset_001_Chest_mesh_vtx_2 + 0, 3, 0),
-	gsSP1Triangle(0, 1, 2, 0),
 	gsSPEndDisplayList(),
 };
 Vtx mario_swim_000_offset_001_Chest_skinned_vtx_0[10] = {
@@ -3109,33 +3096,24 @@ Gfx mario_swim_000_offset_011_LFoot_mesh_tri_0[] = {
 	gsSP1Triangle(10, 4, 1, 0),
 	gsSP1Triangle(1, 5, 10, 0),
 	gsSPEndDisplayList(),
-};Vtx mario_swim_000_offset_011_LFoot_mesh_vtx_1[6] = {
+};Vtx mario_swim_000_offset_011_LFoot_mesh_vtx_1[7] = {
 	{{{-11, 54, 53},0, {-16, -16},{0xAC, 0x47, 0x41, 0xFF}}},
 	{{{-12, 53, -32},0, {-16, -16},{0xAC, 0x4C, 0xC5, 0xFF}}},
 	{{{-42, 65, 9},0, {-16, -16},{0x8A, 0x30, 0xFE, 0xFF}}},
 	{{{78, 21, 61},0, {-16, -16},{0x4E, 0x26, 0x5D, 0xFF}}},
 	{{{76, 20, -41},0, {-16, -16},{0x4F, 0x18, 0xA0, 0xFF}}},
 	{{{110, 8, 8},0, {-16, -16},{0x7F, 0x8, 0xFD, 0xFF}}},
+	{{{80, -31, 7},0, {-16, -16},{0x4A, 0x99, 0x0, 0xFF}}},
 };
 
 Gfx mario_swim_000_offset_011_LFoot_mesh_tri_1[] = {
-	gsSPVertex(mario_swim_000_offset_011_LFoot_mesh_vtx_1 + 0, 6, 0),
+	gsSPVertex(mario_swim_000_offset_011_LFoot_mesh_vtx_1 + 0, 7, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(0, 3, 1, 0),
 	gsSP1Triangle(3, 4, 1, 0),
 	gsSP1Triangle(3, 5, 4, 0),
-	gsSPEndDisplayList(),
-};Vtx mario_swim_000_offset_011_LFoot_mesh_vtx_2[4] = {
-	{{{110, 8, 8},0, {-16, -16},{0x7F, 0x8, 0xFD, 0xFF}}},
-	{{{80, -31, 7},0, {-16, -16},{0x4A, 0x99, 0x0, 0xFF}}},
-	{{{76, 20, -41},0, {-16, -16},{0x4F, 0x18, 0xA0, 0xFF}}},
-	{{{78, 21, 61},0, {-16, -16},{0x4E, 0x26, 0x5D, 0xFF}}},
-};
-
-Gfx mario_swim_000_offset_011_LFoot_mesh_tri_2[] = {
-	gsSPVertex(mario_swim_000_offset_011_LFoot_mesh_vtx_2 + 0, 4, 0),
-	gsSP1Triangle(0, 1, 2, 0),
-	gsSP1Triangle(1, 0, 3, 0),
+	gsSP1Triangle(6, 5, 3, 0),
+	gsSP1Triangle(5, 6, 4, 0),
 	gsSPEndDisplayList(),
 };
 Vtx mario_swim_000_offset_011_LFoot_skinned_vtx_0[5] = {
@@ -3252,33 +3230,24 @@ Gfx mario_swim_000_displaylist_005_RFoot_mesh_tri_0[] = {
 	gsSP1Triangle(1, 9, 10, 0),
 	gsSP1Triangle(10, 5, 1, 0),
 	gsSPEndDisplayList(),
-};Vtx mario_swim_000_displaylist_005_RFoot_mesh_vtx_1[4] = {
+};Vtx mario_swim_000_displaylist_005_RFoot_mesh_vtx_1[7] = {
+	{{{-43, 64, -12},0, {-16, -16},{0x89, 0x2D, 0xFD, 0xFF}}},
+	{{{-14, 54, 29},0, {-16, -16},{0xAA, 0x4C, 0x38, 0xFF}}},
+	{{{-11, 53, -56},0, {-16, -16},{0xAE, 0x44, 0xBC, 0xFF}}},
 	{{{78, 22, -61},0, {-16, -16},{0x4D, 0x26, 0xA3, 0xFF}}},
+	{{{75, 23, 40},0, {-16, -16},{0x4F, 0x1C, 0x5F, 0xFF}}},
 	{{{110, 11, -8},0, {-16, -16},{0x7F, 0xA, 0x4, 0xFF}}},
 	{{{80, -29, -7},0, {-16, -16},{0x4C, 0x9A, 0x1, 0xFF}}},
-	{{{75, 23, 40},0, {-16, -16},{0x4F, 0x1C, 0x5F, 0xFF}}},
 };
 
 Gfx mario_swim_000_displaylist_005_RFoot_mesh_tri_1[] = {
-	gsSPVertex(mario_swim_000_displaylist_005_RFoot_mesh_vtx_1 + 0, 4, 0),
+	gsSPVertex(mario_swim_000_displaylist_005_RFoot_mesh_vtx_1 + 0, 7, 0),
 	gsSP1Triangle(0, 1, 2, 0),
-	gsSP1Triangle(2, 1, 3, 0),
-	gsSPEndDisplayList(),
-};Vtx mario_swim_000_displaylist_005_RFoot_mesh_vtx_2[6] = {
-	{{{75, 23, 40},0, {-16, -16},{0x4F, 0x1C, 0x5F, 0xFF}}},
-	{{{110, 11, -8},0, {-16, -16},{0x7F, 0xA, 0x4, 0xFF}}},
-	{{{78, 22, -61},0, {-16, -16},{0x4D, 0x26, 0xA3, 0xFF}}},
-	{{{-14, 54, 29},0, {-16, -16},{0xAA, 0x4C, 0x38, 0xFF}}},
-	{{{-11, 53, -56},0, {-16, -16},{0xAE, 0x44, 0xBC, 0xFF}}},
-	{{{-43, 64, -12},0, {-16, -16},{0x89, 0x2D, 0xFD, 0xFF}}},
-};
-
-Gfx mario_swim_000_displaylist_005_RFoot_mesh_tri_2[] = {
-	gsSPVertex(mario_swim_000_displaylist_005_RFoot_mesh_vtx_2 + 0, 6, 0),
-	gsSP1Triangle(0, 1, 2, 0),
-	gsSP1Triangle(3, 0, 2, 0),
-	gsSP1Triangle(3, 2, 4, 0),
-	gsSP1Triangle(5, 3, 4, 0),
+	gsSP1Triangle(1, 3, 2, 0),
+	gsSP1Triangle(1, 4, 3, 0),
+	gsSP1Triangle(4, 5, 3, 0),
+	gsSP1Triangle(6, 5, 4, 0),
+	gsSP1Triangle(3, 5, 6, 0),
 	gsSPEndDisplayList(),
 };
 Vtx mario_swim_000_displaylist_005_RFoot_skinned_vtx_0[5] = {
@@ -3332,36 +3301,6 @@ Gfx mat_mario_swim_skin[] = {
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsSPSetLights1(mario_swim_skin_lights),
-	gsSPEndDisplayList(),
-};
-
-
-Gfx mat_mario_swim_hat[] = {
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureLUT(G_TT_RGBA16),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, mario_swim_mario_cap_ci4_pal_rgba16),
-	gsDPTileSync(),
-	gsDPSetTile(0, 0, 0, 256, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadSync(),
-	gsDPLoadTLUTCmd(7, 15),
-	gsDPPipeSync(),
-	gsDPTileSync(),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b, 16, mario_swim_mario_cap_ci4),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 2, 0, 7, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPLoadSync(),
-	gsDPLoadTile(7, 0, 0, 62, 60),
-	gsDPPipeSync(),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 2, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 60),
-	gsSPSetLights1(mario_swim_hat_lights),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_mario_swim_hat[] = {
-	gsDPPipeSync(),
-	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
 };
 
@@ -3433,6 +3372,36 @@ Gfx mat_mario_swim_sideburns[] = {
 };
 
 Gfx mat_revert_mario_swim_sideburns[] = {
+	gsDPPipeSync(),
+	gsDPSetTextureLUT(G_TT_NONE),
+	gsSPEndDisplayList(),
+};
+
+
+Gfx mat_mario_swim_hat[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPSetTextureLUT(G_TT_RGBA16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, mario_swim_mario_cap_ci4_pal_rgba16),
+	gsDPTileSync(),
+	gsDPSetTile(0, 0, 0, 256, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadSync(),
+	gsDPLoadTLUTCmd(7, 15),
+	gsDPPipeSync(),
+	gsDPTileSync(),
+	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b, 16, mario_swim_mario_cap_ci4),
+	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 2, 0, 7, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPLoadSync(),
+	gsDPLoadTile(7, 0, 0, 62, 60),
+	gsDPPipeSync(),
+	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_4b, 2, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 60),
+	gsSPSetLights1(mario_swim_hat_lights),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_mario_swim_hat[] = {
 	gsDPPipeSync(),
 	gsDPSetTextureLUT(G_TT_NONE),
 	gsSPEndDisplayList(),
@@ -3522,15 +3491,6 @@ Gfx mat_revert_mario_swim_wingCombined[] = {
 };
 
 
-Gfx mat_mario_swim_white[] = {
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsSPSetLights1(mario_swim_white_lights),
-	gsSPEndDisplayList(),
-};
-
-
 Gfx mario_swim_000_offset_bottom_mesh[] = {
 	gsSPDisplayList(mat_mario_swim_button),
 	gsSPDisplayList(mario_swim_000_offset_bottom_mesh_tri_0),
@@ -3551,9 +3511,6 @@ Gfx mario_swim_000_offset_001_Chest_mesh[] = {
 	gsSPDisplayList(mario_swim_000_offset_001_Chest_mesh_tri_0),
 	gsSPDisplayList(mat_mario_swim_skin),
 	gsSPDisplayList(mario_swim_000_offset_001_Chest_mesh_tri_1),
-	gsSPDisplayList(mat_mario_swim_hat),
-	gsSPDisplayList(mario_swim_000_offset_001_Chest_mesh_tri_2),
-	gsSPDisplayList(mat_revert_mario_swim_hat),
 	gsSPEndDisplayList(),
 };
 
@@ -3563,9 +3520,6 @@ Gfx mario_swim_000_offset_001_Chest_mesh_mat_override_metal_0[] = {
 	gsSPDisplayList(mat_revert_mario_swim_metal),
 	gsSPDisplayList(mat_mario_swim_metal),
 	gsSPDisplayList(mario_swim_000_offset_001_Chest_mesh_tri_1),
-	gsSPDisplayList(mat_revert_mario_swim_metal),
-	gsSPDisplayList(mat_mario_swim_metal),
-	gsSPDisplayList(mario_swim_000_offset_001_Chest_mesh_tri_2),
 	gsSPDisplayList(mat_revert_mario_swim_metal),
 	gsSPEndDisplayList(),
 };
@@ -3941,7 +3895,7 @@ Gfx mario_swim_000_displaylist_003_LHand_mesh_mat_override_metal_0[] = {
 
 
 Gfx mario_swim_002_switch_option_LOPEN_000_displaylistOption1_LOPEN_mesh[] = {
-	gsSPDisplayList(mat_mario_swim_white),
+	gsSPDisplayList(mat_mario_swim_skin),
 	gsSPDisplayList(mario_swim_002_switch_option_LOPEN_000_displaylistOption1_LOPEN_mesh_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -4068,7 +4022,7 @@ Gfx mario_swim_000_displaylist_004_Rhand_mesh_mat_override_metal_0[] = {
 
 
 Gfx mario_swim_002_switch_option_LHandOption1_000_displaylist_003__ROPEN_mesh[] = {
-	gsSPDisplayList(mat_mario_swim_white),
+	gsSPDisplayList(mat_mario_swim_skin),
 	gsSPDisplayList(mario_swim_002_switch_option_LHandOption1_000_displaylist_003__ROPEN_mesh_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -4083,7 +4037,7 @@ Gfx mario_swim_002_switch_option_LHandOption1_000_displaylist_003__ROPEN_mesh_ma
 
 
 Gfx mario_swim_002_switch_option_RPEACE_000_displaylist_003__RPEACE_mesh[] = {
-	gsSPDisplayList(mat_mario_swim_white),
+	gsSPDisplayList(mat_mario_swim_skin),
 	gsSPDisplayList(mario_swim_002_switch_option_RPEACE_000_displaylist_003__RPEACE_mesh_tri_0),
 	gsSPEndDisplayList(),
 };
@@ -4101,7 +4055,7 @@ Gfx mario_swim_002_switch_option_RCAP_000_displaylist_003_RCAP_mesh[] = {
 	gsSPDisplayList(mat_mario_swim_hat),
 	gsSPDisplayList(mario_swim_002_switch_option_RCAP_000_displaylist_003_RCAP_mesh_tri_0),
 	gsSPDisplayList(mat_revert_mario_swim_hat),
-	gsSPDisplayList(mat_mario_swim_white),
+	gsSPDisplayList(mat_mario_swim_skin),
 	gsSPDisplayList(mario_swim_002_switch_option_RCAP_000_displaylist_003_RCAP_mesh_tri_1),
 	gsSPEndDisplayList(),
 };
@@ -4125,7 +4079,7 @@ Gfx mario_swim_002_switch_option_RCAPHAND_000_displaylist_003_RCAPHAND_mesh[] = 
 	gsSPDisplayList(mat_mario_swim_wingCombined),
 	gsSPDisplayList(mario_swim_002_switch_option_RCAPHAND_000_displaylist_003_RCAPHAND_mesh_tri_1),
 	gsSPDisplayList(mat_revert_mario_swim_wingCombined),
-	gsSPDisplayList(mat_mario_swim_white),
+	gsSPDisplayList(mat_mario_swim_skin),
 	gsSPDisplayList(mario_swim_002_switch_option_RCAPHAND_000_displaylist_003_RCAPHAND_mesh_tri_2),
 	gsSPEndDisplayList(),
 };
@@ -4206,10 +4160,8 @@ Gfx mario_swim_000_offset_010_LLeg_skinned_mat_override_metal_0[] = {
 Gfx mario_swim_000_offset_011_LFoot_mesh[] = {
 	gsSPDisplayList(mat_mario_swim_skin),
 	gsSPDisplayList(mario_swim_000_offset_011_LFoot_mesh_tri_0),
-	gsSPDisplayList(mat_mario_swim_shoes),
-	gsSPDisplayList(mario_swim_000_offset_011_LFoot_mesh_tri_1),
 	gsSPDisplayList(mat_mario_swim_skin),
-	gsSPDisplayList(mario_swim_000_offset_011_LFoot_mesh_tri_2),
+	gsSPDisplayList(mario_swim_000_offset_011_LFoot_mesh_tri_1),
 	gsSPEndDisplayList(),
 };
 
@@ -4219,9 +4171,6 @@ Gfx mario_swim_000_offset_011_LFoot_mesh_mat_override_metal_0[] = {
 	gsSPDisplayList(mat_revert_mario_swim_metal),
 	gsSPDisplayList(mat_mario_swim_metal),
 	gsSPDisplayList(mario_swim_000_offset_011_LFoot_mesh_tri_1),
-	gsSPDisplayList(mat_revert_mario_swim_metal),
-	gsSPDisplayList(mat_mario_swim_metal),
-	gsSPDisplayList(mario_swim_000_offset_011_LFoot_mesh_tri_2),
 	gsSPDisplayList(mat_revert_mario_swim_metal),
 	gsSPEndDisplayList(),
 };
@@ -4305,8 +4254,6 @@ Gfx mario_swim_000_displaylist_005_RFoot_mesh[] = {
 	gsSPDisplayList(mario_swim_000_displaylist_005_RFoot_mesh_tri_0),
 	gsSPDisplayList(mat_mario_swim_skin),
 	gsSPDisplayList(mario_swim_000_displaylist_005_RFoot_mesh_tri_1),
-	gsSPDisplayList(mat_mario_swim_shoes),
-	gsSPDisplayList(mario_swim_000_displaylist_005_RFoot_mesh_tri_2),
 	gsSPEndDisplayList(),
 };
 
@@ -4316,9 +4263,6 @@ Gfx mario_swim_000_displaylist_005_RFoot_mesh_mat_override_metal_0[] = {
 	gsSPDisplayList(mat_revert_mario_swim_metal),
 	gsSPDisplayList(mat_mario_swim_metal),
 	gsSPDisplayList(mario_swim_000_displaylist_005_RFoot_mesh_tri_1),
-	gsSPDisplayList(mat_revert_mario_swim_metal),
-	gsSPDisplayList(mat_mario_swim_metal),
-	gsSPDisplayList(mario_swim_000_displaylist_005_RFoot_mesh_tri_2),
 	gsSPDisplayList(mat_revert_mario_swim_metal),
 	gsSPEndDisplayList(),
 };

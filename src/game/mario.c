@@ -1707,7 +1707,7 @@ void func_sh_8025574C(void) {
 s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
 
-    if (gPlayer1Controller->buttonDown & L_TRIG) {
+    if (gPlayer1Controller->buttonDown & L_TRIG && gMarioState->action == ACT_IDLE) {
         set_mario_action(gMarioState, ACT_CHANGE_MODEL, 0);
     }
 
