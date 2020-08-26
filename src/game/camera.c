@@ -6374,6 +6374,9 @@ struct CameraTrigger sCamTotWC[] = {
 struct CameraTrigger sCamWMOtR[] = {
 	NULL_TRIGGER
 };
+struct CameraTrigger sCamJRB[] = {
+	NULL_TRIGGER
+};
 struct CameraTrigger *sCameraTriggers[LEVEL_COUNT + 1] = {
     NULL,
     #include "levels/level_defines.h"
@@ -10757,10 +10760,14 @@ BAD_RETURN(s32) cutscene_plane_rotate_camera(struct Camera *c) {
     
     vec3f_set_dist_and_angle(sMarioCamState->pos, c->pos, 4000, 0x2000, (gCutsceneTimer * 0x100));
     if (gCutsceneTimer == 399) {
-        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        initiate_warp(LEVEL_JRB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
     }
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        gCutsceneTimer = 398;
+    }
+
 }
 struct Cutscene sCutscenePlane[] = {
     { cutscene_plane_rotate_camera, 400 },
@@ -10821,7 +10828,7 @@ u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // CASTLE_INSIDE  | HMC
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SSL            | BOB
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // SL             | WDW
-	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 1, 0, 0), // JRB            | THI
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // JRB            | THI
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // TTC            | RR
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // CASTLE_GROUNDS | BITDW
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // VCUTM          | BITFS

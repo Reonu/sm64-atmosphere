@@ -485,5 +485,8 @@ void render_hud(void) {
         {
             print_text(10, 60, "SURFACE NODE POOL FULL");
         }
+        if (gCurrLevelNum == LEVEL_WMOTR){
+            print_text(10, 10, "PRESS START TO SKIP");
+        }
     }
 }
