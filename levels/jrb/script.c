@@ -47,6 +47,7 @@ const LevelScript level_jrb_entry[] = {
 
 	AREA(1, jrb_area_1),
 		WARP_NODE(0x0A, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
+		OBJECT(MODEL_NONE, -544, -162, -1897, 0, 0, 0, 0x00000000, bhvBirdsSoundLoop),
 		OBJECT(MODEL_NONE, 0, 0, 0, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
 		TERRAIN(jrb_area_1_collision),
 		MACRO_OBJECTS(jrb_area_1_Area_Root_macro_objs),

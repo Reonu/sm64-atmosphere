@@ -616,7 +616,9 @@ void general_star_dance_handler(struct MarioState *m, s32 isInWater) {
 
             case 80:
                 if ((m->actionArg & 1) == 0) {
-                    level_trigger_warp(m, WARP_OP_STAR_EXIT);
+                    enable_time_stop();
+                    create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);
+                    m->actionState = 1;
                 } else {
                     enable_time_stop();
                     create_dialog_box_with_response(gLastCompletedStarNum == 7 ? DIALOG_013 : DIALOG_014);
@@ -2637,6 +2639,33 @@ static s32 check_for_instant_quicksand(struct MarioState *m) {
     }
     return FALSE;
 }
+static s32 act_change_model(struct MarioState *m) {
+    if (m->actionTimer < 60){
+        set_mario_animation(m, MARIO_ANIM_STAR_DANCE);
+    }
+        
+    else{
+        set_mario_animation(m, MARIO_ANIM_RETURN_FROM_STAR_DANCE);
+    }
+        
+    if (m->actionTimer == 40){
+            if (m->marioObj->header.gfx.sharedChild == gLoadedGraphNodes[MODEL_MARIO]){
+                 m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO_SWIM];
+                 //gMarioState->flags &= ~MARIO_CAP_ON_HEAD;
+            }
+               
+            else{
+                m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO];
+            }
+                
+    }
+    if (m->actionTimer == 90){
+        set_mario_action(m, ACT_IDLE, 0);
+    }
+        
+    m->actionTimer++;
+    return FALSE;
+}
 
 s32 mario_execute_cutscene_action(struct MarioState *m) {
     s32 cancel;
@@ -2698,6 +2727,7 @@ s32 mario_execute_cutscene_action(struct MarioState *m) {
         case ACT_BUTT_STUCK_IN_GROUND:       cancel = act_butt_stuck_in_ground(m);       break;
         case ACT_FEET_STUCK_IN_GROUND:       cancel = act_feet_stuck_in_ground(m);       break;
         case ACT_PUTTING_ON_CAP:             cancel = act_putting_on_cap(m);             break;
+        case ACT_CHANGE_MODEL:               cancel = act_change_model(m);               break;
     }
     /* clang-format on */
 

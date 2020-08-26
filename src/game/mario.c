@@ -1708,8 +1708,7 @@ s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
 
     if (gPlayer1Controller->buttonDown & L_TRIG) {
-        o->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO_SWIM];
-        gMarioState->flags &= ~MARIO_CAP_ON_HEAD;
+        set_mario_action(gMarioState, ACT_CHANGE_MODEL, 0);
     }
 
     if (gMarioState->action) {

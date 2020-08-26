@@ -244,6 +244,7 @@
 #define CUTSCENE_EXIT_FALL_WMOTR      180
 #define CUTSCENE_ENTER_POOL           181
 #define CUTSCENE_PLANE                182
+#define CUTSCENE_CHANGE_CLOTHES       183
 
 /**
  * Stop the cutscene.

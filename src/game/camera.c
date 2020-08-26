@@ -10772,6 +10772,14 @@ BAD_RETURN(s32) cutscene_plane_rotate_camera(struct Camera *c) {
 struct Cutscene sCutscenePlane[] = {
     { cutscene_plane_rotate_camera, 400 },
 };
+BAD_RETURN(s32) cutscene_change_clothes(struct Camera *c) {
+    
+    vec3f_set_dist_and_angle(sMarioCamState->pos, c->pos, 4000, 0x2000, 0);
+
+}
+struct Cutscene sCutsceneChangeClothes[] = {
+    { cutscene_change_clothes, 400 },
+};
 
 /* TODO:
  * The next two arrays are both related to levels, and they look generated.
