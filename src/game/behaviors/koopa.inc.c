@@ -500,13 +500,16 @@ static void koopa_the_quick_act_wait_before_race(void) {
     if (o->oKoopaTheQuickInitTextboxCooldown != 0) {
         o->oKoopaTheQuickInitTextboxCooldown -= 1;
     } else if (cur_obj_can_mario_activate_textbox_2(400.0f, 400.0f)) {
+            if (gMarioState->unlockPlane == 1){
+                        o->oAction = KOOPA_THE_QUICK_ACT_SHOW_INIT_TEXT;
+                        o->oForwardVel = 0.0f;
+                        cur_obj_init_animation_with_sound(7);
+            }
         //! The next action doesn't execute until next frame, giving mario one
         //  frame where he can jump, and thus no longer be ready to speak.
         //  (On J, he has two frames and doing this enables time stop - see
         //  cur_obj_update_dialog_with_cutscene for that glitch)
-        o->oAction = KOOPA_THE_QUICK_ACT_SHOW_INIT_TEXT;
-        o->oForwardVel = 0.0f;
-        cur_obj_init_animation_with_sound(7);
+
     }
 }
 
