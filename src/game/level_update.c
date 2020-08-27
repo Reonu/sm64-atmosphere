@@ -1165,7 +1165,7 @@ s32 init_level(void) {
     if (gCurrCreditsEntry == NULL) {
         gHudDisplay.flags = HUD_DISPLAY_DEFAULT;
     } else {
-        gHudDisplay.flags = HUD_DISPLAY_NONE;
+        gHudDisplay.flags = HUD_DISPLAY_DEFAULT;
     }
 
     sTimerRunning = 0;
