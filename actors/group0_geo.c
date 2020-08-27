@@ -19,3 +19,4 @@
 #include "toad/geo.inc.c" //Toad
 
 #include "mario_swim/geo.inc.c"
+#include "peach2/geo.inc.c"

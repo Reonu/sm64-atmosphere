@@ -32,3 +32,6 @@
 #include "toad/model.inc.c"
 #include "toad/anims/data.inc.c"
 #include "toad/anims/table.inc.c"
+#include "peach2/model.inc.c"
+#include "peach2/anims/data.inc.c"
+#include "peach2/anims/table.inc.c"

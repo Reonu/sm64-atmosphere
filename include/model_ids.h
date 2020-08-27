@@ -26,6 +26,7 @@
 #define MODEL_MARIO                       0x01        // mario_geo
 #define MODEL_MARIO_SWIM                  0x02        // unused
 #define MODEL_TOAD                        0xFF        // toad_geo
+#define MODEL_PEACH2                      0xFE
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 

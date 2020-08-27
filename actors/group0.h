@@ -372,4 +372,8 @@ extern const struct Animation *const toad_seg6_anims_0600FB58[];
 
 #include "mario_swim/geo_header.h"
 
+#include "peach2/geo_header.h"
+
+
+#include "peach2/anim_header.h"
 #endif

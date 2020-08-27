@@ -54,9 +54,9 @@ extern Vtx bob_dl_BackgroundRoad_mesh_vtx_1[16];
 extern Gfx bob_dl_BackgroundRoad_mesh_tri_1[];
 extern Vtx bob_dl_BackgroundRoad_mesh_vtx_2[6];
 extern Gfx bob_dl_BackgroundRoad_mesh_tri_2[];
-extern Vtx bob_dl_Buildings_mesh_vtx_0[156];
+extern Vtx bob_dl_Buildings_mesh_vtx_0[136];
 extern Gfx bob_dl_Buildings_mesh_tri_0[];
-extern Vtx bob_dl_Buildings_mesh_vtx_1[316];
+extern Vtx bob_dl_Buildings_mesh_vtx_1[284];
 extern Gfx bob_dl_Buildings_mesh_tri_1[];
 
 extern Gfx bob_dl_Map_mesh[];
