@@ -1375,6 +1375,20 @@ void update_mario_geometry_inputs(struct MarioState *m) {
 /**
  * Handles Mario's input flags as well as a couple timers.
  */
+
+void dismount_shell(struct MarioState *m)
+{
+    struct Object* riddenObj = m->riddenObj;
+    if (riddenObj != NULL)
+    {
+        m->riddenObj = NULL;
+        riddenObj->oInteractStatus = INT_STATUS_STOP_RIDING;
+        obj_mark_for_deletion(riddenObj);
+    }
+    // Use freefall instead of jump to prevent gaining height after dismounting shell
+    set_mario_action(m, ACT_FREEFALL, 0);
+}
+
 void update_mario_inputs(struct MarioState *m) {
     m->particleFlags = 0;
     m->input = 0;
@@ -1386,6 +1400,21 @@ void update_mario_inputs(struct MarioState *m) {
     update_mario_geometry_inputs(m);
 
     debug_print_speed_action_normal(m);
+
+    if (m->controller->buttonPressed & L_TRIG ){
+        if (m->action & ACT_FLAG_RIDING_SHELL)
+            {
+                dismount_shell(m);
+            }
+        else {
+        struct Object* shellObj = spawn_object_with_scale(m->marioObj, MODEL_KOOPA_SHELL, bhvKoopaShell, 1);
+        set_mario_action(m, ACT_RIDING_SHELL_GROUND, 0);
+        shellObj->oInteractStatus |= INT_STATUS_INTERACTED;
+        shellObj->oAction = 1;
+        m->riddenObj = shellObj;
+        }
+
+    }
 
     if (gCameraMovementFlags & CAM_MOVE_C_UP_MODE) {
         if (m->action & ACT_FLAG_ALLOW_FIRST_PERSON) {
@@ -1707,7 +1736,7 @@ void func_sh_8025574C(void) {
 s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
 
-    if (gPlayer1Controller->buttonDown & L_TRIG && gMarioState->action == ACT_IDLE) {
+    if (gPlayer1Controller->buttonDown & U_JPAD && gMarioState->action == ACT_IDLE) {
         set_mario_action(gMarioState, ACT_CHANGE_MODEL, 0);
     }
 

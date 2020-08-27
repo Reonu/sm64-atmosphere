@@ -361,7 +361,7 @@ void bobomb_buddy_act_talk(void) {
 
         switch (o->oBobombBuddyRole) {
             case BOBOMB_BUDDY_ROLE_ADVICE:
-                if ((o->oBehParams >> 24) & 0x01){
+                if ((o->oBehParams >> 24) == 0x01){
                     if (gMarioState->unlockPlane == 1){
                         if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, (o->oBehParams >> 8) & 0xFF)
                             != BOBOMB_BUDDY_BP_STYPE_GENERIC) {
@@ -395,8 +395,9 @@ void bobomb_buddy_act_talk(void) {
                     o->oInteractStatus = 0;
                     o->oAction = BOBOMB_BUDDY_ACT_IDLE;
                 }
-                break;
                 }
+                break;
+                
 
 
             case BOBOMB_BUDDY_ROLE_CANNON:
