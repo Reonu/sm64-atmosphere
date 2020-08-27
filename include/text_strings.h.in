@@ -218,8 +218,8 @@
 #define TEXT_THANK_YOU_MARIO __("Thank you, Mario!")
 #define TEXT_SOMETHING_SPECIAL __("We have to do something special for you...")
 #define TEXT_LISTEN_EVERYBODY _("Listen, everybody,")
-#define TEXT_LETS_HAVE_CAKE _("let's bake a delicious cake...")
-#define TEXT_FOR_MARIO _("...for Mario...")
+#define TEXT_LETS_HAVE_CAKE _("let's go on vacation.")
+#define TEXT_FOR_MARIO _("Mario deserves it.")
 #define TEXT_FILE_MARIO_QUESTION _("Mario!")
 
 #endif
