@@ -295,7 +295,7 @@ void bobomb_buddy_act_idle(void) {
 
     collisionFlags = object_step();
 
-    if (((sp1a == 5) || (sp1a == 16)) && o->header.gfx.sharedChild != gLoadedGraphNodes[MODEL_PEACH2] )
+    if (((sp1a == 5) || (sp1a == 16)) && o->header.gfx.sharedChild == gLoadedGraphNodes[MODEL_BOBOMB_BUDDY] )
         cur_obj_play_sound_2(SOUND_OBJ_BOBOMB_WALK);
 
     if (o->oDistanceToMario < 1000.0f)
@@ -361,7 +361,7 @@ void bobomb_buddy_act_talk(void) {
 
         switch (o->oBobombBuddyRole) {
             case BOBOMB_BUDDY_ROLE_ADVICE:
-                if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, o->oBehParams3ndByte)
+                if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, o->oBehParams2ndByte)
                     != BOBOMB_BUDDY_BP_STYPE_GENERIC) {
                     set_mario_npc_dialog(0);
 
