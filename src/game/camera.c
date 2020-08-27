@@ -7251,6 +7251,13 @@ BAD_RETURN(s32) cutscene_ending_mario_fall(struct Camera *c) {
     cutscene_event(cutscene_ending_mario_fall_start, c, 0, 0);
     cutscene_event(cutscene_ending_mario_fall_focus_mario, c, 0, -1);
     player2_rotate_cam(c, -0x2000, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
+
 }
 
 /**
@@ -7260,6 +7267,12 @@ BAD_RETURN(s32) cutscene_ending_mario_land_closeup(struct Camera *c) {
     vec3f_set(c->focus, 85.f, 826.f, 250.f);
     vec3f_set(c->pos, -51.f, 988.f, -202.f);
     player2_rotate_cam(c, -0x2000, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7268,6 +7281,12 @@ BAD_RETURN(s32) cutscene_ending_mario_land_closeup(struct Camera *c) {
 BAD_RETURN(s32) cutscene_ending_reset_spline(UNUSED struct Camera *c) {
     sCutsceneVars[9].point[0] = 0.f;
     cutscene_reset_spline();
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7276,6 +7295,12 @@ BAD_RETURN(s32) cutscene_ending_reset_spline(UNUSED struct Camera *c) {
 BAD_RETURN(s32) cutscene_ending_fly_up_to_window(struct Camera *c) {
     move_point_along_spline(c->pos, sEndingFlyToWindowPos, &sCutsceneSplineSegment, &sCutsceneSplineSegmentProgress);
     move_point_along_spline(c->focus, sEndingFlyToWindowFocus, &sCutsceneSplineSegment, &sCutsceneSplineSegmentProgress);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7285,6 +7310,12 @@ BAD_RETURN(s32) cutscene_ending_stars_free_peach(struct Camera *c) {
     cutscene_event(cutscene_ending_reset_spline, c, 0, 0);
     cutscene_event(cutscene_ending_fly_up_to_window, c, 0, -1);
     player2_rotate_cam(c, -0x2000, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7294,6 +7325,12 @@ BAD_RETURN(s32) cutscene_ending_mario_land(struct Camera *c) {
     vec3f_set(c->focus, sEndingFlyToWindowFocus[0].point[0], sEndingFlyToWindowFocus[0].point[1] + 80.f, sEndingFlyToWindowFocus[0].point[2]);
     vec3f_set(c->pos, sEndingFlyToWindowPos[0].point[0], sEndingFlyToWindowPos[0].point[1], sEndingFlyToWindowPos[0].point[2] + 150.f);
     player2_rotate_cam(c, -0x800, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7303,6 +7340,12 @@ BAD_RETURN(s32) cutscene_ending_peach_appear_closeup(struct Camera *c) {
     vec3f_set(c->pos, 179.f, 2463.f, -1216.f);
     c->pos[1] = gCutsceneFocus->oPosY + 35.f;
     vec3f_set(c->focus, gCutsceneFocus->oPosX, gCutsceneFocus->oPosY + 125.f, gCutsceneFocus->oPosZ);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7313,6 +7356,12 @@ BAD_RETURN(s32) cutscene_ending_peach_appears(struct Camera *c) {
     approach_f32_asymptotic_bool(&c->pos[1], gCutsceneFocus->oPosY + 35.f, 0.02f);
     approach_f32_asymptotic_bool(&c->focus[1], gCutsceneFocus->oPosY + 125.f, 0.15f);
     player2_rotate_cam(c, -0x2000, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7321,6 +7370,12 @@ BAD_RETURN(s32) cutscene_ending_peach_appears(struct Camera *c) {
 BAD_RETURN(s32) cutscene_ending_peach_descends_start(UNUSED struct Camera *c) {
     cutscene_reset_spline();
     sCutsceneVars[2].point[1] = 150.f;
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7329,6 +7384,12 @@ BAD_RETURN(s32) cutscene_ending_peach_descends_start(UNUSED struct Camera *c) {
 BAD_RETURN(s32) cutscene_ending_follow_peach_descent(struct Camera *c) {
     move_point_along_spline(c->pos, sEndingPeachDescentCamPos, &sCutsceneSplineSegment, &sCutsceneSplineSegmentProgress);
     c->pos[1] += gCutsceneFocus->oPosY + sCutsceneVars[3].point[1];
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7336,6 +7397,12 @@ BAD_RETURN(s32) cutscene_ending_follow_peach_descent(struct Camera *c) {
  */
 BAD_RETURN(s32) cutscene_ending_peach_descent_lower_focus(UNUSED struct Camera *c) {
     camera_approach_f32_symmetric_bool(&(sCutsceneVars[2].point[1]), 90.f, 0.5f);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7348,6 +7415,12 @@ BAD_RETURN(s32) cutscene_ending_peach_descent_back_to_mario(struct Camera *c) {
     c->pos[0] = pos[0];
     c->pos[2] = pos[2];
     approach_f32_asymptotic_bool(&c->pos[1], (pos[1] += gCutsceneFocus->oPosY), 0.07f);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7362,6 +7435,12 @@ BAD_RETURN(s32) cutscene_ending_peach_descends(struct Camera *c) {
     vec3f_set(c->focus, gCutsceneFocus->oPosX, sCutsceneVars[2].point[1] + gCutsceneFocus->oPosY,
               gCutsceneFocus->oPosZ);
     player2_rotate_cam(c, -0x2000, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7373,6 +7452,12 @@ BAD_RETURN(s32) cutscene_ending_mario_to_peach(struct Camera *c) {
     move_point_along_spline(c->pos, sEndingMarioToPeachPos, &sCutsceneSplineSegment, &sCutsceneSplineSegmentProgress);
     move_point_along_spline(c->focus, sEndingMarioToPeachFocus, &sCutsceneSplineSegment, &sCutsceneSplineSegmentProgress);
     player2_rotate_cam(c, -0x2000, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7380,6 +7465,12 @@ BAD_RETURN(s32) cutscene_ending_mario_to_peach(struct Camera *c) {
  */
 BAD_RETURN(s32) cutscene_ending_look_up_at_castle(UNUSED struct Camera *c) {
     move_point_along_spline(c->focus, sEndingLookUpAtCastle, &sCutsceneSplineSegment, &sCutsceneSplineSegmentProgress);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7399,6 +7490,12 @@ BAD_RETURN(s32) cutscene_ending_peach_wakeup(struct Camera *c) {
 #endif
     vec3f_set(c->pos, -163.f, 978.f, -1082.f);
     player2_rotate_cam(c, -0x800, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7408,6 +7505,12 @@ BAD_RETURN(s32) cutscene_ending_dialog(struct Camera *c) {
     vec3f_set(c->focus, 11.f, 983.f, -1273.f);
     vec3f_set(c->pos, -473.f, 970.f, -1152.f);
     player2_rotate_cam(c, -0x800, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7417,6 +7520,12 @@ BAD_RETURN(s32) cutscene_ending_kiss_closeup(struct Camera *c) {
     set_fov_function(CAM_FOV_SET_29);
     vec3f_set(c->focus, 350.f, 1034.f, -1216.f);
     vec3f_set(c->pos, -149.f, 1021.f, -1216.f);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7431,6 +7540,12 @@ BAD_RETURN(s32) cutscene_ending_kiss_here_we_go(struct Camera *c) {
     //! another double typo
     approach_vec3f_asymptotic(c->pos, pos, 0.2, 0.1f, 0.2f);
     approach_vec3f_asymptotic(c->focus, foc, 0.2, 0.1f, 0.2f);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7444,6 +7559,12 @@ BAD_RETURN(s32) cutscene_ending_kiss(struct Camera *c) {
     cutscene_event(cutscene_ending_kiss_here_we_go, c, 155, -1);
 #endif
     player2_rotate_cam(c, -0x800, 0x2000, -0x2000, 0x2000);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7452,6 +7573,12 @@ BAD_RETURN(s32) cutscene_ending_kiss(struct Camera *c) {
 BAD_RETURN(s32) cutscene_ending_look_at_sky(struct Camera *c) {
     move_point_along_spline(c->focus, sEndingLookAtSkyFocus, &sCutsceneSplineSegment, &sCutsceneSplineSegmentProgress);
     vec3f_set(c->pos, 699.f, 1680.f, -703.f);
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7460,6 +7587,12 @@ BAD_RETURN(s32) cutscene_ending_look_at_sky(struct Camera *c) {
  */
 BAD_RETURN(s32) cutscene_ending_zoom_fov(UNUSED struct Camera *c) {
     sFOVState.fov = 37.f;
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**
@@ -7474,6 +7607,17 @@ BAD_RETURN(s32) cutscene_ending_cake_for_mario(struct Camera *c) {
     cutscene_spawn_obj(8, 608);
     cutscene_spawn_obj(8, 624);
     cutscene_spawn_obj(8, 710);
+    if (gCutsceneTimer >= 400){
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
+    print_text(10, 215, "PRESS START TO SKIP");
+    if (gPlayer1Controller->buttonPressed & START_BUTTON) {
+        initiate_warp(LEVEL_BOB,1,0x0A,0);
+        level_set_transition(30,NULL);
+        play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+    }
 }
 
 /**

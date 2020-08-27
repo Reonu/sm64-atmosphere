@@ -85,6 +85,15 @@ void bhv_act_selector_star_type_loop(void) {
     // Unused timer, only referenced here. Probably replaced by sActSelectorMenuTimer
     gCurrentObject->oStarSelectorTimer++;
 }
+s32 check_new_file(void) {
+    if(save_file_exists(gCurrSaveFileNum - 1)){
+        return LEVEL_BOB;
+    }
+    else{
+        return LEVEL_CASTLE_GROUNDS;
+    }
+}
+
 
 /**
  * Renders the 100 coin star with an special star selector type.
