@@ -7256,6 +7256,7 @@ BAD_RETURN(s32) cutscene_ending_mario_fall(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 
 }
@@ -7272,6 +7273,7 @@ BAD_RETURN(s32) cutscene_ending_mario_land_closeup(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7286,6 +7288,7 @@ BAD_RETURN(s32) cutscene_ending_reset_spline(UNUSED struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7300,6 +7303,7 @@ BAD_RETURN(s32) cutscene_ending_fly_up_to_window(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7315,6 +7319,7 @@ BAD_RETURN(s32) cutscene_ending_stars_free_peach(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7330,6 +7335,7 @@ BAD_RETURN(s32) cutscene_ending_mario_land(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7345,6 +7351,7 @@ BAD_RETURN(s32) cutscene_ending_peach_appear_closeup(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7361,6 +7368,7 @@ BAD_RETURN(s32) cutscene_ending_peach_appears(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7375,6 +7383,7 @@ BAD_RETURN(s32) cutscene_ending_peach_descends_start(UNUSED struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7389,6 +7398,7 @@ BAD_RETURN(s32) cutscene_ending_follow_peach_descent(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7402,6 +7412,7 @@ BAD_RETURN(s32) cutscene_ending_peach_descent_lower_focus(UNUSED struct Camera *
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7420,6 +7431,7 @@ BAD_RETURN(s32) cutscene_ending_peach_descent_back_to_mario(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7440,6 +7452,7 @@ BAD_RETURN(s32) cutscene_ending_peach_descends(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7457,6 +7470,7 @@ BAD_RETURN(s32) cutscene_ending_mario_to_peach(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7470,6 +7484,7 @@ BAD_RETURN(s32) cutscene_ending_look_up_at_castle(UNUSED struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7495,6 +7510,7 @@ BAD_RETURN(s32) cutscene_ending_peach_wakeup(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7510,6 +7526,7 @@ BAD_RETURN(s32) cutscene_ending_dialog(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7525,6 +7542,7 @@ BAD_RETURN(s32) cutscene_ending_kiss_closeup(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7545,6 +7563,7 @@ BAD_RETURN(s32) cutscene_ending_kiss_here_we_go(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7564,6 +7583,7 @@ BAD_RETURN(s32) cutscene_ending_kiss(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7578,6 +7598,7 @@ BAD_RETURN(s32) cutscene_ending_look_at_sky(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7592,6 +7613,7 @@ BAD_RETURN(s32) cutscene_ending_zoom_fov(UNUSED struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
@@ -7611,12 +7633,14 @@ BAD_RETURN(s32) cutscene_ending_cake_for_mario(struct Camera *c) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
     print_text(10, 215, "PRESS START TO SKIP");
     if (gPlayer1Controller->buttonPressed & START_BUTTON) {
         initiate_warp(LEVEL_BOB,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
+        gCurrCreditsEntry = NULL;
     }
 }
 
