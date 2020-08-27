@@ -376,4 +376,14 @@ extern const struct Animation *const toad_seg6_anims_0600FB58[];
 
 
 #include "peach2/anim_header.h"
+#include "shell2/geo_header.h"
+
+#include "luigi2/geo_header.h"
+
+
+#include "luigi2/anim_header.h"
+#include "wario/geo_header.h"
+
+
+#include "wario/anim_header.h"
 #endif

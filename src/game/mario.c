@@ -1407,7 +1407,7 @@ void update_mario_inputs(struct MarioState *m) {
                 dismount_shell(m);
             }
         else {
-        struct Object* shellObj = spawn_object_with_scale(m->marioObj, MODEL_KOOPA_SHELL, bhvKoopaShell, 1);
+        struct Object* shellObj = spawn_object_with_scale(m->marioObj, MODEL_SHELL2, bhvKoopaShell, 1);
         set_mario_action(m, ACT_RIDING_SHELL_GROUND, 0);
         shellObj->oInteractStatus |= INT_STATUS_INTERACTED;
         shellObj->oAction = 1;

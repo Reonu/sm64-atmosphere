@@ -20,3 +20,6 @@
 
 #include "mario_swim/geo.inc.c"
 #include "peach2/geo.inc.c"
+#include "shell2/geo.inc.c"
+#include "luigi2/geo.inc.c"
+#include "wario/geo.inc.c"

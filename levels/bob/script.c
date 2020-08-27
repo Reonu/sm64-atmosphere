@@ -43,7 +43,7 @@ const LevelScript level_bob_entry[] = {
 		OBJECT(MODEL_KOOPA_WITH_SHELL, 553, -1548, -1820, 0, 0, 0, 0x00020000, bhvKoopa),
 		OBJECT(MODEL_1UP, 1140, -1548, -657, 0, 0, 0, 0x01000000, bhv1Up),
 		OBJECT(0xFE, 524, -1548, -1304, 0, 0, 0, 0x01050203, bhvPeach2),
-		OBJECT(0xFE, 703, -1548, -1282, 0, 0, 0, 0x00050203, bhvPeach2),
+		OBJECT(0xFC, 703, -1548, -1282, 0, 0, 0, 0x00050203, bhvLuigi2),
 		OBJECT(MODEL_NONE, 65, -1548, 684, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
 		MARIO_POS(0x01, 0, 91, -1548, 1150),
 		OBJECT(0x39, 883, -1133, -5249, 0, 0, 0, 0x00000000, bhvWindow),

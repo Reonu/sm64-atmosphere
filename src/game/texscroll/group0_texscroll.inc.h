@@ -1,3 +1,6 @@
+#include "actors/wario/texscroll.inc.h"
+#include "actors/luigi2/texscroll.inc.h"
+#include "actors/shell2/texscroll.inc.h"
 #include "actors/peach2/texscroll.inc.h"
 #include "actors/mario_swim/texscroll.inc.h"
 #include "actors/mario/texscroll.inc.h"
