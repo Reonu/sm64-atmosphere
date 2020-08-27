@@ -2651,6 +2651,7 @@ static s32 act_change_model(struct MarioState *m) {
     if (m->actionTimer == 40){
             if (m->marioObj->header.gfx.sharedChild == gLoadedGraphNodes[MODEL_MARIO]){
                  m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO_SWIM];
+                 play_sound(SOUND_MENU_STAR_SOUND_OKEY_DOKEY, gMarioState->marioObj->header.gfx.cameraToObject);
                  //gMarioState->flags &= ~MARIO_CAP_ON_HEAD;
             }
                

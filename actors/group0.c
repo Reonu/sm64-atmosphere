@@ -27,3 +27,8 @@
 #include "sparkle_animation/model.inc.c"
 
 #include "mario_swim/model.inc.c"
+
+//Toad
+#include "toad/model.inc.c"
+#include "toad/anims/data.inc.c"
+#include "toad/anims/table.inc.c"

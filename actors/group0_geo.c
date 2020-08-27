@@ -16,5 +16,6 @@
 #include "water_splash/geo.inc.c"
 #include "sparkle_animation/geo.inc.c"
 #include "mario/geo.inc.c"
+#include "toad/geo.inc.c" //Toad
 
 #include "mario_swim/geo.inc.c"
