@@ -361,7 +361,32 @@ void bobomb_buddy_act_talk(void) {
 
         switch (o->oBobombBuddyRole) {
             case BOBOMB_BUDDY_ROLE_ADVICE:
-                if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, o->oBehParams2ndByte)
+                if ((o->oBehParams >> 24) & 0x01){
+                    if (gMarioState->unlockPlane == 1){
+                        if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, (o->oBehParams >> 8) & 0xFF)
+                            != BOBOMB_BUDDY_BP_STYPE_GENERIC) {
+                                set_mario_npc_dialog(0);
+
+                                o->activeFlags &= ~ACTIVE_FLAG_INITIATED_TIME_STOP;
+                                o->oBobombBuddyHasTalkedToMario = BOBOMB_BUDDY_HAS_TALKED;
+                                o->oInteractStatus = 0;
+                                o->oAction = BOBOMB_BUDDY_ACT_IDLE;
+                            }
+                    }
+                        else{
+                            if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, (o->oBehParams) & 0xFF)
+                                != BOBOMB_BUDDY_BP_STYPE_GENERIC) {
+                                    set_mario_npc_dialog(0);
+
+                                    o->activeFlags &= ~ACTIVE_FLAG_INITIATED_TIME_STOP;
+                                    o->oBobombBuddyHasTalkedToMario = BOBOMB_BUDDY_HAS_TALKED;
+                                    o->oInteractStatus = 0;
+                                    o->oAction = BOBOMB_BUDDY_ACT_IDLE;
+                        }
+                    }
+                }
+                else{
+                    if (cutscene_object_with_dialog(CUTSCENE_DIALOG, o, o->oBehParams2ndByte)
                     != BOBOMB_BUDDY_BP_STYPE_GENERIC) {
                     set_mario_npc_dialog(0);
 
@@ -371,6 +396,8 @@ void bobomb_buddy_act_talk(void) {
                     o->oAction = BOBOMB_BUDDY_ACT_IDLE;
                 }
                 break;
+                }
+
 
             case BOBOMB_BUDDY_ROLE_CANNON:
                 if (gCurrCourseNum == COURSE_BOB)
