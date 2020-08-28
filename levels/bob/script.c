@@ -42,7 +42,7 @@ const LevelScript level_bob_entry[] = {
 		WARP_NODE(0x02, LEVEL_BOB, 0x01, 0x0A, WARP_NO_CHECKPOINT),
 		OBJECT(MODEL_KOOPA_WITH_SHELL, 553, -1548, -1820, 0, 0, 0, 0x00020000, bhvKoopa),
 		OBJECT(MODEL_YELLOW_KEY, 1140, -1548, -657, 0, 0, 0, 0x01000000, bhv1Up),
-		OBJECT(0xFE, 1889, -1548, -2109, 0, 0, 0, 0x01000001, bhvPeach2),
+		OBJECT(0xFE, 1889, -1548, -2109, 0, 0, 0, 0x01000100, bhvPeach2),
 		OBJECT(0xFC, -458, -1548, -1202, 0, 0, 0, 0x00050203, bhvLuigi2),
 		OBJECT(0xFB, 1897, -1548, -794, 0, 0, 0, 0x00000000, bhvWario),
 		OBJECT(MODEL_NONE, 65, -1548, 684, 0, 0, 0, 0x000A0000, bhvInstantActiveWarp),
