@@ -500,7 +500,7 @@ static void koopa_the_quick_act_wait_before_race(void) {
     if (o->oKoopaTheQuickInitTextboxCooldown != 0) {
         o->oKoopaTheQuickInitTextboxCooldown -= 1;
     } else if (cur_obj_can_mario_activate_textbox_2(400.0f, 400.0f)) {
-            if (gMarioState->unlockPlane == 1){
+            if (gMarioState->unlockPlane > 0){
                         o->oAction = KOOPA_THE_QUICK_ACT_SHOW_INIT_TEXT;
                         o->oForwardVel = 0.0f;
                         cur_obj_init_animation_with_sound(7);
@@ -534,6 +534,7 @@ static void koopa_the_quick_act_show_init_text(void) {
         o->oKoopaTurningAwayFromWall = FALSE;
         o->oFlags |= OBJ_FLAG_ACTIVE_FROM_AFAR;
         ;   */
+        gMarioState->unlockPlane--;
         initiate_warp(LEVEL_WMOTR,1,0x0A,0);
         level_set_transition(30,NULL);
         play_transition(WARP_TRANSITION_FADE_INTO_CIRCLE, 0x10, 0x00, 0x00, 0x00);
