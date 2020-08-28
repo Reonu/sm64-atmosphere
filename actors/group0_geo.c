@@ -23,3 +23,4 @@
 #include "shell2/geo.inc.c"
 #include "luigi2/geo.inc.c"
 #include "wario/geo.inc.c"
+#include "yellow_key/geo.inc.c"

@@ -42,3 +42,4 @@
 #include "wario/model.inc.c"
 #include "wario/anims/data.inc.c"
 #include "wario/anims/table.inc.c"
+#include "yellow_key/model.inc.c"
