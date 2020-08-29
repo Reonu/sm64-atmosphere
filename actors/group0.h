@@ -388,4 +388,6 @@ extern const struct Animation *const toad_seg6_anims_0600FB58[];
 #include "wario/anim_header.h"
 #include "yellow_key/geo_header.h"
 
+#include "mario_swim_board/geo_header.h"
+
 #endif

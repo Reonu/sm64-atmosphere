@@ -43,3 +43,4 @@
 #include "wario/anims/data.inc.c"
 #include "wario/anims/table.inc.c"
 #include "yellow_key/model.inc.c"
+#include "mario_swim_board/model.inc.c"

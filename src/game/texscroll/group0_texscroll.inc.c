@@ -6,6 +6,7 @@
 #include "actors/luigi2/texscroll.inc.c"
 #include "actors/wario/texscroll.inc.c"
 #include "actors/yellow_key/texscroll.inc.c"
+#include "actors/mario_swim_board/texscroll.inc.c"
 void scroll_textures_group0() {
 	scroll_actor_geo_mario();
 
@@ -20,5 +21,7 @@ void scroll_textures_group0() {
 	scroll_actor_geo_wario();
 
 	scroll_actor_geo_yellow_key();
+
+	scroll_actor_geo_mario_swim_board();
 
 }

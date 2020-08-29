@@ -1,5 +1,5 @@
 extern const GeoLayout shell2_geo[];
-extern Vtx shell2_Cube_mesh_vtx_0[146];
+extern Vtx shell2_Cube_mesh_vtx_0[64];
 extern Gfx shell2_Cube_mesh_tri_0[];
 
 extern Gfx shell2_Cube_mesh[];

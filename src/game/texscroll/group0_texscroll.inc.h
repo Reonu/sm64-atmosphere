@@ -1,3 +1,4 @@
+#include "actors/mario_swim_board/texscroll.inc.h"
 #include "actors/yellow_key/texscroll.inc.h"
 #include "actors/wario/texscroll.inc.h"
 #include "actors/luigi2/texscroll.inc.h"

@@ -1405,13 +1405,15 @@ void update_mario_inputs(struct MarioState *m) {
         if (m->action & ACT_FLAG_RIDING_SHELL)
             {
                 dismount_shell(m);
+                m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO_SWIM_BOARD];
             }
-        else {
+        else if ((m->action == ACT_WALKING) || (m->action == ACT_IDLE) || (m->action == ACT_JUMP)) {
         struct Object* shellObj = spawn_object_with_scale(m->marioObj, MODEL_SHELL2, bhvKoopaShell, 1);
         set_mario_action(m, ACT_RIDING_SHELL_GROUND, 0);
         shellObj->oInteractStatus |= INT_STATUS_INTERACTED;
         shellObj->oAction = 1;
         m->riddenObj = shellObj;
+        m->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO_SWIM];
         }
 
     }
@@ -1735,6 +1737,10 @@ void func_sh_8025574C(void) {
  */
 s32 execute_mario_action(UNUSED struct Object *o) {
     s32 inLoop = TRUE;
+
+    if ((!(gMarioState->action & ACT_FLAG_RIDING_SHELL)) && (gMarioState->marioObj->header.gfx.sharedChild == gLoadedGraphNodes[MODEL_MARIO_SWIM])){
+        gMarioState->marioObj->header.gfx.sharedChild = gLoadedGraphNodes[MODEL_MARIO_SWIM_BOARD];
+    }
 
     if (gPlayer1Controller->buttonDown & U_JPAD && gMarioState->action == ACT_IDLE) {
         set_mario_action(gMarioState, ACT_CHANGE_MODEL, 0);

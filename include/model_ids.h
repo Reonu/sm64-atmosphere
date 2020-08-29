@@ -31,6 +31,7 @@
 #define MODEL_LUIGI2                      0xFC
 #define MODEL_WARIO                       0xFB
 #define MODEL_YELLOW_KEY                  0xFA
+#define MODEL_MARIO_SWIM_BOARD             0xF9
 
 /* Various static level geometry, the geo layout differs but terrain object presets treat them the same.*/
 
