@@ -10937,6 +10937,21 @@ BAD_RETURN(s32) cutscene_plane_rotate_camera(struct Camera *c) {
     }
 
 }
+
+BAD_RETURN(s32) cutscene_plane_behind(struct Camera *c) {
+    
+    vec3f_set_dist_and_angle(gMarioState->pos, c->pos, 4000, 0x2000, DEGREES(90));
+    //if (gCutsceneTimer == 399) {
+
+    //}
+
+}
+
+struct Cutscene sCutscenePlaneBehind[] = {
+    { cutscene_plane_behind, 400 },
+};
+
+
 struct Cutscene sCutscenePlane[] = {
     { cutscene_plane_rotate_camera, 400 },
 };
@@ -11013,7 +11028,7 @@ u8 sZoomOutAreaMasks[] = {
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // WF             | ENDING
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 0, 0, 0, 0), // COURTYARD      | PSS
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // COTMC          | TOTWC
-	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 0, 0, 0), // BOWSER_1       | WMOTR
+	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 1, 1, 0, 0), // BOWSER_1       | WMOTR
 	ZOOMOUT_AREA_MASK(0, 0, 0, 0, 1, 0, 0, 0), // Unused         | BOWSER_2
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // BOWSER_3       | Unused
 	ZOOMOUT_AREA_MASK(1, 0, 0, 0, 0, 0, 0, 0), // TTM            | Unused

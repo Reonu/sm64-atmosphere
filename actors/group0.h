@@ -367,6 +367,15 @@ extern const Gfx toad_seg6_dl_06008A90[];
 extern const Gfx toad_seg6_dl_06008BD8[];
 extern const struct Animation *const toad_seg6_anims_0600FB58[];
 
+// bomb
+extern const GeoLayout bowser_bomb_geo[];
+extern const Gfx bomb_seg6_dl_0605A7C0[];
+extern const Gfx bomb_seg6_dl_0605A7F8[];
+extern const Gfx bomb_seg6_dl_0605A830[];
+extern const Gfx bomb_seg6_dl_0605A8A8[];
+extern const Gfx bomb_seg6_dl_0605A9C0[];
+
+
 
 #include "mario/geo_header.h"
 
@@ -389,5 +398,6 @@ extern const struct Animation *const toad_seg6_anims_0600FB58[];
 #include "yellow_key/geo_header.h"
 
 #include "mario_swim_board/geo_header.h"
+
 
 #endif

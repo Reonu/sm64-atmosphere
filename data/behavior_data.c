@@ -4226,6 +4226,7 @@ const BehaviorScript bhvBowserBomb[] = {
     SET_INT(oIntangibleTimer, 0),
     SET_HITBOX_WITH_OFFSET(/*Radius*/ 40, /*Height*/ 40, /*Downwards offset*/ 40),
     DELAY(1),
+    SET_FLOAT(oDrawingDistance, 100000),
     BEGIN_LOOP(),
         SET_INT(oIntangibleTimer, 0),
         CALL_NATIVE(bhv_bowser_bomb_loop),

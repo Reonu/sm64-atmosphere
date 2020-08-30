@@ -487,7 +487,7 @@ void render_hud(void) {
             print_text(10, 60, "SURFACE NODE POOL FULL");
         }
         if (gCurrLevelNum == LEVEL_WMOTR){
-            print_text(10, 10, "PRESS START TO SKIP");
+            print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(54), 10, "%d", gMarioState->marioObj->oPosY);
         }
     }
 }

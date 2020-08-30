@@ -25,3 +25,5 @@
 #include "wario/geo.inc.c"
 #include "yellow_key/geo.inc.c"
 #include "mario_swim_board/geo.inc.c"
+
+#include "bomb/geo.inc.c"

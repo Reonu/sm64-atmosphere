@@ -245,6 +245,7 @@
 #define CUTSCENE_ENTER_POOL           181
 #define CUTSCENE_PLANE                182
 #define CUTSCENE_CHANGE_CLOTHES       183
+#define CUTSCENE_PLANE_BEHIND         184
 
 /**
  * Stop the cutscene.
